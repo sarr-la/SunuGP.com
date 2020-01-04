@@ -1,8 +1,9 @@
 @extends("layouts.app")
 @section("content")
   <!-- Header -->
-  <header class="masthead">
+  <header class="masthead ">
     <div class="container">
+
       <div class="intro-text">
         <div class="intro-lead-in"><strong>Bienvenue dans notre site</strong></div>
         <div class="intro-heading text-uppercase">Ravis de vous rencontrer</div>

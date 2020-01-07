@@ -27,21 +27,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-
-
-
-        $user = Auth::user();
-        $user_id = Auth::id();
-        $trajet->user_id = Auth::id();
-        $trajet->save();
-
-        $Trajets->user_id = Auth::id();
-        $Trajets->save();
-
-
-
-       
-
     }
 
     /**

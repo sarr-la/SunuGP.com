@@ -5,7 +5,7 @@
     <div class="container">
 
       <div class="intro-text">
-        <div class="intro-lead-in"><strong>Bienvenue dans notre site</strong></div>
+        <div class="intro-lead-in"><marquee>Bienvenue dans notre site</marquee></div>
         <div class="intro-heading text-uppercase">Ravis de vous rencontrer</div>
       </div>
     </div>
@@ -93,7 +93,7 @@
 
   </section>
   <!-- Portfolio Grid -->
-  
-       
+
+
 
   @endsection

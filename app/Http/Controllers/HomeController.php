@@ -23,17 +23,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $trajets = \App\Trajet::orderBy('created_at', 'desc')->paginate(7);
+        $trajets = \App\Trajet::orderBy('created_at', 'desc')->paginate(10);
         return view('home',compact('trajets'));
     }
 
     public function edit($id)
     {
-    $this->authorize('admin');
-    $reservation = \App\Resevation::find($id);
-    $trajet = \App\Trajet::find($id);
-    $Trajets = \App\Trajet::pluck('name','id');
-    return view('products.edit', compact('product','categories'));
+        $this->authorize('admin');
+        $reservation = \App\Resevation::find($id);
+        $trajet = \App\Trajet::find($id);
+        $Trajets = \App\Trajet::pluck('name','id');
+        return view('Trajets.edit', compact('trajet','Trajets'));
     }
 
 }

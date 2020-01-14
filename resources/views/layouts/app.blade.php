@@ -75,7 +75,7 @@
       </div>
     </div>
   </nav>
-<div class="container"> 
+<div class="container">
 
 
 @yield("content")
@@ -88,7 +88,7 @@
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contactez nous!</h2>
     <hr>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Avez vous des questions? N'hésitez pas de nous contacter!</p>
+    <p class="text-center w-responsive mx-auto mb-5"><marquee>Avez vous des questions? N'hésitez pas de nous contacter!</marquee></p>
 
     <div class="row">
 
@@ -114,7 +114,7 @@
 </div>
 </form><div class="container"><br><br><br><br>
 
-   
+
  </section>
 
 

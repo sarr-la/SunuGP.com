@@ -14,11 +14,6 @@ class Resevation extends Model
     return $this->belongsTo('App\trajet');
  }
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
 }
 
 

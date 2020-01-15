@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class reservationController extends Controller
 {
- 
+
 public function reservation(){
     $reservation = \App\Resevation::all();
     return view('Reservations.reservation', compact('reservation'));
-}       
+}
 
 
 public function index(){
@@ -46,7 +46,11 @@ public function store(Request $request)
 
 
         return redirect()->route('ajouter_reservation')->with(['success' => "reservation enregistré"]);
-
-
 }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 }

@@ -19,7 +19,7 @@ class ReservationsController extends Controller
 
         }
 
-     
+
 
      public function store(Request $request)
 {
@@ -51,7 +51,7 @@ public function update(Request $request, $id){
       }
       return redirect('/Reservations');
  }
- 
+
 
  public function suprimer($id)
 {
@@ -60,6 +60,11 @@ if($Reservations)
 $Reservations->delete();
 return redirect('/Reservations');
 
-
 }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 }

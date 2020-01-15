@@ -76,13 +76,13 @@ Route::delete('Trajets/{id}', 'TrajetsController@destroy');
 
 Route::get('/reservation', 'reservationController@reservation');
 
-Route::get('/reservation/create','reservationController@create')->name('create_reservation');
+Route::get('/reservation/create','reservationController@create')->name('create_reservation')->middleware('auth');
 Route::post('/reservation/create','reservationController@store')->name('store_reservation');
 Route::get('/reservation/ajouter','reservationController@ajout')->name("ajouter_reservation");
 
 
 Route::get('/Reservations','ReservationsController@Reservations')->name('Reservations');
-Route::get('/Reservations/create','ReservationsController@create')->name('create_Reservations');
+Route::get('/Reservations/create','ReservationsController@create')->name('create_Reservations')->middleware('auth');
 Route::post('Reservations/create','ReservationsController@store')->name('store_Reservations');
 
 

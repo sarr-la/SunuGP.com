@@ -18,7 +18,14 @@ public function index(){
     return view('Reservations.reservation', compact('reservation'));
     }
 
-
+    public function ajout(){
+        $trajets = \App\Trajet();
+        return view('Reservations.ajout', compact('trajets'));
+    }
+    public function ajout(){
+        $trajets = \App\Trajet::pluck('lieu_de_depart','id');
+        return view('Reservations.ajout', compact('trajets'));
+    }
 
 
 public function store(Request $request)

@@ -132,6 +132,7 @@
 
       </div><hr>
   <!-- Copyright -->
+    <footer>
   <div class="footer-copyright text-center py-3"><strong>© 2020 </strong>Tout droit réservé par les jeunes développeurs de <strong>GalimaTech:</strong>
     <a  href="{{route('home')}}"> <strong>SunuGP.com </strong></a>
   </div>

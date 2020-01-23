@@ -82,6 +82,7 @@
             <p><span><strong>Lieu d'arrivée:</strong>{{$trajet->lieu_darrivee }}</span></p>
             <hr>
             <p><span><strong>Type de véhicule:</strong>{{$trajet->type_de_vehicule}}</span></p>
+              <p><span><strong>Matricule:</strong>{{$trajet->matricule}}</span></p>
             <p class="text-muted"></p>
           </div>
         </div>

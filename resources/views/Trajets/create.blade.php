@@ -21,6 +21,9 @@
 <div>
 <input type="text" name="type_de_vehicule" class="form-control" placeholder="type de véhicule">
 </div>
+    <div>
+        <input type="text" name="matricule" class="form-control" placeholder="matricule">
+    </div>
 <div>
 <input type="image" name="image" class="form-control" placeholder="image">
 </div>

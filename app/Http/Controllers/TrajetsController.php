@@ -17,7 +17,7 @@ class TrajetsController extends Controller
      {
         return view('create');
      }
-     
+
 
      public function store(Request $request)
 {
@@ -27,6 +27,7 @@ class TrajetsController extends Controller
    $Trajets->date_darrivee = $request->input('date_darrivee');
    $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
    $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
+   $Trajets->matricule = $request->input('matricule');
    $Trajets->image = $request->input('image');
    $Trajets->save();
    return redirect('/');
@@ -54,12 +55,13 @@ public function update(Request $request, $id){
         $Trajets->date_darrivee = $request->input('date_darrivee');
         $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
         $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
+        $Trajets->matricule = $request->input('matricule');
       //  $Trajets->image = $request->input('image');
         $Trajets->save();
     }
     return redirect('/Trajets');
  }
- 
+
 
 
 
@@ -91,5 +93,5 @@ public function show($id){
    $this->middleware('auth');
    }
 
-  
+
 }

@@ -4,6 +4,7 @@
 <th>{{$Contact->prenom}}</th>
 <th>{{$Contact->nom}}</th>
 <th>{{$Contact->email}}</th>
+    <th>{{$Contact->numero_de_telephone}}</th>
 <th>{{$Contact->votre_sujet}}</th>
 <th>{{$Contact->votre_message}}<br>
  {{

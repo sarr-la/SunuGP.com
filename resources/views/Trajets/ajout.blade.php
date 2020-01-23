@@ -27,6 +27,7 @@ class="form-control"></div>
    <div><input type="text" name="date_darrivee" class="form-control" placeholder="date d'arrivée, exemple:2020-01-20 19:39:27"></div>
    <div><input type="text" name="lieu_darrivee" class="form-control" placeholder="lieu d'arrivée"></div>
    <div><input type="text" name="type_de_vehicule" class="form-control" placeholder="type de véhicule"></div>
+       <div><input type="text" name="matricule" class="form-control" placeholder="matricule, example:DK-3810-AA"></div>
    <div><input type="image" name="image" class="form-control" placeholder="image"></div>
    <div> <button class="btn btn-primary">ajouter un trajet</button> </div>
 </form>

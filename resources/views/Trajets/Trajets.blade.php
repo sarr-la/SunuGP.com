@@ -4,10 +4,11 @@
 <table class="table table-striped">
        <tr>
            <th>date_de_depart</th>
-           <th>lieu_de_depart</th> 
-           <th>date_darrivee</th> 
-           <th>lieu_darrivee</th> 
-           <th>type_de_vehicule</th> 
+           <th>lieu_de_depart</th>
+           <th>date_darrivee</th>
+           <th>lieu_darrivee</th>
+           <th>type_de_vehicule</th>
+           <th>matricule</th>
        </tr>
        @foreach($Trajets as $Trajets)
            <tr>
@@ -16,6 +17,7 @@
                <th>{{$Trajets->date_darrivee}}</th>
                <th>{{$Trajets->lieu_darrivee}}</th>
                <th>{{$Trajets->type_de_vehicule}}</th>
+               <th>{{$Trajets->matricule}}</th>
                 <th>
                       <p><a href="{{route('editer_Trajets',['id'=>$Trajets->id])}}">Editer un trajet</a></p>
 
@@ -24,14 +26,14 @@
                       <p><a href="{{route('suprimer_Trajets',['id'=>$Trajets->id])}}">suprimer un trajet</a></p>
 
                 </th>
-    
+
 
 
                 <tr>
 <th>{{$Trajets->name}} - <img src="{{$Trajets->image ?
 asset($Trajets->image) : asset('uploads/images/default.png')}}"
 alt="{{$Trajets->name}}" width="50"></th>
-<th>{{$Trajets->date_de_depart}}   {{$Trajets->lieu_de_depart}} {{$Trajets->date_darrivee}} {{$Trajets->lieu_darrivee}} {{$Trajets->type_de_vehicule}}  {{ $Trajets->image->name ?? ''
+<th>{{$Trajets->date_de_depart}}   {{$Trajets->lieu_de_depart}} {{$Trajets->date_darrivee}} {{$Trajets->lieu_darrivee}} {{$Trajets->type_de_vehicule}}   {{$Trajets->matricule}}  {{ $Trajets->image->name ?? ''
 }}</th>
 <th>
 <p><a href="{{route('editer_Trajets',['id'=>$Trajets->id])}}"

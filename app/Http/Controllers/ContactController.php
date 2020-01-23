@@ -20,7 +20,7 @@ class ContactController extends Controller
 
         return view('Contact.ajout');
     }
-    
+
 
 public function store(Request $request){
 
@@ -28,6 +28,7 @@ public function store(Request $request){
     $Contact->prenom = $request->input('prenom');
     $Contact->nom = $request->input('nom');
     $Contact->email = $request->input('email');
+    $Contact->numero_de_telephone = $request->input('numero_de_telephone');
     $Contact->votre_sujet = $request->input('votre_sujet');
     $Contact->votre_message = $request->input('votre_message');
 $Contact->save();

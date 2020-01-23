@@ -20,6 +20,7 @@ class CreateTrajetsTable extends Migration
             $table->dateTime('date_darrivee');
             $table->string('lieu_darrivee');
             $table->string('type_de_vehicule');
+            $table->string('matricule');
             $table->string('image');
             $table->unsignedInteger('user_id');
             $table->timestamps();

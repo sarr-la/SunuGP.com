@@ -12,6 +12,9 @@
 <div>
 <input type="text" name="email" class="form-control" placeholder="email">
 </div>
+    <div>
+        <input type="text" name="numero_de_telephone" class="form-control" placeholder="numero_de_telephone">
+    </div>
 <div>
 <input type="text" name="votre_sujet" class="form-control" placeholder="votre_sujet">
 </div>

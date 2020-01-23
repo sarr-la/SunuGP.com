@@ -8,11 +8,11 @@ use Illuminate\Support\Str;
 
 class trajetController extends Controller
 {
-    
+
     public function trajet(){
         $trajet = \App\Trajet::all();
         return view('Trajets.trajet', compact('trajet'));
-    }       
+    }
 
 
     public function index(){
@@ -26,7 +26,7 @@ class trajetController extends Controller
 
         return view('Trajets.ajout');
     }
-    
+
 
     public function store(Request $request)
 {
@@ -38,6 +38,7 @@ class trajetController extends Controller
             'date_darrivee'=>'required|min:1|date',
             'lieu_darrivee'=>'required|min:2|string',
             'type_de_vehicule'=>'required|min:2|string',
+            'matricule'=>'required|min:7|string',
             "trajet_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
             ]);
 
@@ -47,14 +48,14 @@ class trajetController extends Controller
             //On enregistre l'image dans un dossier
             $image = $request->file('trajet_image');
             //Nous allons definir le nom de notre image en combinant le nom du trajet et un timestamp
-            
+
             $image_name = Str::slug($request->input('name')).'_'.time();
             //Nous enregistrerons nos fichiers dans /uploads/images dans public
             $folder = '/uploads/images/';
             //Nous allons enregistrer le chemin complet de l'image dans la BD
             $trajet->image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
             //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode  uploadImage();
-          
+
             $this->uploadImage($image, $folder, 'public', $image_name);
             }
 
@@ -63,6 +64,7 @@ class trajetController extends Controller
             $trajet->date_darrivee = $request->input('date_darrivee');
             $trajet->lieu_darrivee = $request->input('lieu_darrivee');
             $trajet->type_de_vehicule = $request->input('type_de_vehicule');
+            $trajet->matricule = $request->input('matricule');
             //$trajet->image = $request->input('');
             $trajet->user_id = 1;
             $trajet->save();
@@ -78,7 +80,7 @@ $file = $uploadedFile->storeAs($folder,
 $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
 return $file;
 }
-            
+
 
 public function update(Request $request, $id)
 {
@@ -88,6 +90,7 @@ public function update(Request $request, $id)
         'date_darrivee'=>'required|min:1|date',
         'lieu_darrivee'=>'required|min:2|string',
         'type_de_vehicule'=>'required|min:2|string',
+        'matricule'=>'required|min:7|string',
         "trajet_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
 ]);
 $trajet = \App\Trajet::find($id);
@@ -111,7 +114,11 @@ $Trajets->lieu_de_depart = $request->input('lieu_de_depart');
 $Trajets->date_darrivee = $request->input('date_darrivee');
 $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
 $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
+$Trajets->matricule = $request->input('matricule');
 //  $Trajets->image = $request->input('image');
+
+
+
 $Trajets->save();
 }
 return redirect('/Trajets');

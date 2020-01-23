@@ -8,6 +8,7 @@
 <th>{{$trajets->date_darrivee}}</th>
 <th>{{$trajets->lieu_darrivee}}</th>
 <th>{{$trajets->type_de_vehicule}}</th>
+    <th>{{$trajets->matricule}}</th>
 <br> {{
 $trajets->trajets->name ?? '' }}</th>
 <th></th>

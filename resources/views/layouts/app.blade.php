@@ -95,7 +95,7 @@
     <form action="{{route('store_Contact')}}" method="post">
 @csrf
 <div>
-<input type="text" name="prenom" class="form-control" placeholder="prenom">
+<input type="text" name="prenom" class="form-control" placeholder="prénom">
 </div>
 <div>
 <input type="text" name="nom" class="form-control" placeholder="nom">
@@ -103,6 +103,9 @@
 <div>
 <input type="text" name="email" class="form-control" placeholder="email">
 </div>
+        <div>
+            <input type="text" name="numero_de_telephone" class="form-control" placeholder="numéro de de téléphone">
+        </div>
 <div>
 <input type="text" name="votre_sujet" class="form-control" placeholder="objet">
 </div>
@@ -117,6 +120,15 @@
 
  </section>
 
+
+    <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector:'textarea.description',
+            width: 900,
+            height: 300
+        });
+    </script>
 
 <!-- contact -->
 <div>

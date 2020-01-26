@@ -1,2 +1,3 @@
-<h3>Hello!!! {{$name}}</h3>
-nous devons vous annonçer que votre abonnement va expirer le {{$date}}
+<h3>Hello!!! {{$nom}}</h3>
+votre reservation est en cours de traitement,
+merci de nous contacter au +221773096782 pour plus d'informations, merci!

@@ -41,8 +41,9 @@ public function store(Request $request)
         $reservation->client_id = 1;
         $reservation->trajet_id = 1;
         $reservation->save();
-
-
+        $user_id = Auth::id();
+        $user= User::where('id','=',$user_id);
+        Mail::to($user->email)->send(new AbonnementMail($user->nom));
         return redirect()->route('ajouter_reservation')->with(['success' => "reservation enregistré"]);
 }
 

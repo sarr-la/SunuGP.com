@@ -3,10 +3,8 @@
   <!-- Header -->
   <header class="masthead ">
     <div class="container">
-
       <div class="intro-text">
-        <div class="intro-lead-in"><marquee>Bienvenue dans notre site</marquee></div>
-        <div class="intro-heading text-uppercase">Ravis de vous rencontrer</div>
+          <div class="intro-heading text-uppercase"><marquee>Bienvenue dans notre site web!-Ravis de vous rencontrer!-Merci pour votre confiance renouvelée!-Confidentialité-Sûreté-Fierté-SunuGP.com...</marquee></div>
       </div>
     </div>
   </header>
@@ -51,7 +49,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Les derniers trajets!</h2>
+            <h2 class="section-heading text-uppercase"><marquee>Les derniers trajets sont disponibles!</marquee></h2>
           <hr>
           <h3 class="section-subheading text-muted">Soyez prêts!</h3>
         </div>

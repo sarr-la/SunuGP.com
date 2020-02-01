@@ -36,6 +36,8 @@ class ReservationsController extends Controller
 
 public function edit($id)
 {
+    $this->authorize('admin');
+
    $Reservations = \App\Resevation::find($id);//on recupere les reservations
    return view('Reservations.edit', compact('Reservations'));
 }
@@ -55,6 +57,8 @@ public function update(Request $request, $id){
 
  public function suprimer($id)
 {
+    $this->authorize('admin');
+
 $Reservations = \App\Resevation::find($id);
 if($Reservations)
 $Reservations->delete();

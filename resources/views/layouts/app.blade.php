@@ -53,6 +53,12 @@
               </li>
           @endif
       @else
+
+                <a class="dropdown-item" href="">{{Auth::user()->name}}</a>
+            @if(Auth::user()->roles =='admin')
+                <a class="dropdown-item" href="{{route('Trajets')}}">Abdoulaye</a>
+                @endif
+
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   {{ Auth::user()->name }} <span class="caret"></span>
@@ -79,7 +85,6 @@
 
 
 @yield("content")
-
 
 <!--Section: Contact v.2-->
 <section class="mb-4">
@@ -145,11 +150,12 @@
       </div><hr>
   <!-- Copyright -->
     <footer>
-  <div class="footer-copyright text-center py-3"><strong>© 2020 </strong>Tout droit réservé par les jeunes développeurs de <strong>GalimaTech:</strong>
+  <div class="footer-copyright text-center py-3"><strong>© 2020 </strong>Tous droits réservés par les jeunes développeurs de <strong>GalimaTech:</strong>
     <a  href="{{route('home')}}"> <strong>SunuGP.com </strong></a>
   </div>
   <!-- Copyright -->
 </footer>
+
 <!-- Footer -->
   <script src="{{asset('js/app.js')}}"></script>
 </body>

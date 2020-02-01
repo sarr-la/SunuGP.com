@@ -36,11 +36,12 @@ class TrajetsController extends Controller
 
 public function edit($id)
 {
+    $this->authorize('admin');
+
    $Trajets = \App\Trajet::find($id);//on recupere les Trajets
 
 
    return view('Trajets.edit', compact('Trajets'));
-
 
 }
 
@@ -67,6 +68,8 @@ public function update(Request $request, $id){
 
  public function suprimer($id)
 {
+    $this->authorize('admin');
+
 $Trajets = \App\Trajet::find($id);
 if($Trajets)
 $Trajets->delete();

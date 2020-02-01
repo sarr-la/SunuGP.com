@@ -4,7 +4,7 @@
   <header class="masthead ">
     <div class="container">
       <div class="intro-text">
-          <div class="intro-heading text-uppercase"><marquee>Bienvenue dans notre site web!-Ravis de vous rencontrer!-Merci pour votre confiance renouvelée!-Confidentialité-Sûreté-Fierté-SunuGP.com...</marquee></div>
+          <div class="intro-heading text-uppercase"><marquee>Bienvenue dans notre site web!-Ravis de vous rencontrer!-Merci pour votre confiance renouvelée!-Confidentialité-Sûreté-Fierté SunuGP.com...</marquee></div>
       </div>
     </div>
   </header>

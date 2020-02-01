@@ -50,10 +50,10 @@ class User extends Authenticatable
     public function isAdmin(){
         return strtolower(@$this->roles) === 'admin'? true : false;
     }
-    /**Cett méthode va determiner si le user connecté a un role moderator*/
-    public function isModerator(){
-        return strtolower(@$this->roles) === 'moderator'? true : false;
-    }
 
+    /**Cette méthode va determiner si le user connecté a un role user*/
+    public function isUser(){
+        return strtolower(@$this->roles) === 'user'? true : false;
+    }
 
 }

@@ -7,13 +7,13 @@
 <form action="{{route(' create_Trajets ')}}" method="post">
 @csrf
 <div>
-<input type="text" name="date_de_depart" class="form-control" placeholder="date de départ, exemple:2020-01-19 19:39:25">
+<input type="date" name="date_de_depart" class="form-control" placeholder="date de départ, exemple:2020-01-19 19:39:25">
 </div>
 <div>
 <input type="text" name="lieu_de_depart" class="form-control" placeholder="lieu de départ">
 </div>
 <div>
-<input type="text" name="date_darrive" class="form-control" placeholder="date d'arrivée, exemple:2020-01-20 19:39:27">
+<input type="date" name="date_darrive" class="form-control" placeholder="date d'arrivée, exemple:2020-01-20 19:39:27">
 </div>
 <div>
 <input type="text" name="lieu_darrivee" class="form-control" placeholder="lieu d'arrivée">

@@ -56,7 +56,8 @@
 
                 <a class="dropdown-item" href="">{{Auth::user()->name}}</a>
             @if(Auth::user()->roles =='admin')
-                <a class="dropdown-item" href="{{route('Trajets')}}">Abdoulaye</a>
+                <a class="dropdown-item" href="{{route('Trajets')}}">Trajets</a>
+                    <a class="dropdown-item" href="{{route('Reservations')}}">Reservations</a>
                 @endif
 
           <li class="nav-item dropdown">

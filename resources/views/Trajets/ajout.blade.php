@@ -22,6 +22,9 @@ class="form-control"></div>
 
 
    @csrf
+    <div><input type="text" name="prenom" class="form-control" placeholder="pénom"></div>
+    <div><input type="text" name="nom" class="form-control" placeholder="nom"></div>
+    <div><input type="text" name="votre_numero" class="form-control" placeholder="votre numéro"></div>
    <div><input type="datetime" name="date_de_depart" class="form-control" placeholder="date de départ, exemple:2020-01-19 19:39:25"></div>
    <div><input type="text" name="lieu_de_depart" class="form-control" placeholder="lieu de départ"></div>
    <div><input type="datetime" name="date_darrivee" class="form-control" placeholder="date d'arrivée, exemple:2020-01-20 19:39:27"></div>

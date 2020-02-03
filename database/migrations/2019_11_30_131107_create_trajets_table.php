@@ -15,6 +15,9 @@ class CreateTrajetsTable extends Migration
     {
         Schema::create('trajets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('prenom');
+            $table->string('nom');
+            $table->string('votre_numero');
             $table->dateTime('date_de_depart');
             $table->string('lieu_de_depart');
             $table->dateTime('date_darrivee');

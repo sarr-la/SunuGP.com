@@ -63,11 +63,12 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
               </div>
+            <div class="portfolio-caption">
               <img class="img-fluid" src="{{$trajet->image}}" alt=""><hr>
-
-              <div>
-                <p><a href="{{route('ajouter_trajet')}}"><strong>Ajouter un trajet</strong></a></p><hr>
-                 <p><a href="{{route('ajouter_reservation')}}"><strong>Créer une reservation</strong></a></p>
+            </div>
+              <div class="portfolio-caption">
+                <p><button><a href="{{route('ajouter_trajet')}}"><strong>Ajouter un trajet</strong></a></button></p><hr>
+                  <p><button><a href="{{route('ajouter_reservation')}}"><strong>Créer une réservation</strong></a></button></p>
              </div>
 
           </a>

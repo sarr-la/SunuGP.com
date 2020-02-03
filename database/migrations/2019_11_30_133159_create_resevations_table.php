@@ -15,6 +15,9 @@ class CreateResevationsTable extends Migration
     {
         Schema::create('resevations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('prenom');
+            $table->string('nom');
+            $table->string('votre_numero');
             $table->string('produit');
             $table->integer('poids');
             $table->string('unite');

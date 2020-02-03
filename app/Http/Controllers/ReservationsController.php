@@ -24,6 +24,9 @@ class ReservationsController extends Controller
      public function store(Request $request)
 {
    $Reservations = new Resevation();
+    $Reservations->prenom = $request->input('prenom');
+    $Reservations->nom = $request->input('nom');
+    $Reservations->votre_numero = $request->input('votre_numero');
    $Reservations->produit = $request->input('produit');
    $Reservations->poids = $request->input('poids');
    $Reservations->unite = $request->input('unite');
@@ -45,6 +48,9 @@ public function edit($id)
 public function update(Request $request, $id){
     $Reservations = \App\Resevation::find($id);
     if($Reservations){
+        $Reservations->prenom = $request->input('prenom');
+        $Reservations->nom = $request->input('nom');
+        $Reservations->votre_numero = $request->input('votre_numero');
         $Reservations->produit = $request->input('produit');
         $Reservations->poids = $request->input('poids');
         $Reservations->unite = $request->input('unite');

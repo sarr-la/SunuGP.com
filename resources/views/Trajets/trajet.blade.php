@@ -2,6 +2,9 @@
 @section("content")
 <table class="table table-striped">
        <tr>
+           <th> prenom</th>
+           <th> nom</th>
+           <th> votre_numero</th>
            <th> date_de_depart</th>
             <th>lieu_de_depart</th>
             <th>date_darrivee</th>
@@ -11,6 +14,9 @@
        </tr>
        @foreach($trajet as $trajet)
            <tr>
+               <th>{{$trajet->prenom}}</th>
+               <th>{{$trajet->nom}}</th>
+               <th>{{$trajet->votre_numero}}</th>
                <th>{{$trajet->date_de_depart}}</th>
                <th>{{$trajet->lieu_de_depart}}</th>
                <th>{{$trajet->date_darrivee}}</th>

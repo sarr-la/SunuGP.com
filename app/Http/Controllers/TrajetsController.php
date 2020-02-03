@@ -22,6 +22,9 @@ class TrajetsController extends Controller
      public function store(Request $request)
 {
    $Trajets = new Trajet();
+   $Trajets->prenom = $request->input('prenom');
+   $Trajets->nom = $request->input('nom');
+   $Trajets->votre_numero = $request->input('votre_numero');
    $Trajets->date_de_depart = $request->input('date_de_depart');
    $Trajets->lieu_de_depart = $request->input('lieu_de_depart');
    $Trajets->date_darrivee = $request->input('date_darrivee');
@@ -51,6 +54,9 @@ public function update(Request $request, $id){
    $Trajets = \App\Trajet::find($id);
    if($Trajets){
 
+        $Trajets->prenom = $request->input('prenom');
+        $Trajets->nom = $request->input('nom');
+        $Trajets->votre_numero = $request->input('votre_numero');
         $Trajets->date_de_depart = $request->input('date_de_depart');
         $Trajets->lieu_de_depart = $request->input('lieu_de_depart');
         $Trajets->date_darrivee = $request->input('date_darrivee');

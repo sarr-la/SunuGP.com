@@ -3,6 +3,9 @@
 @section("content")
 @foreach($trajets as $trajets)
 <tr>
+    <th>{{$trajets->prenom}}</th>
+    <th>{{$trajets->nom}}</th>
+    <th>{{$trajets->votre_numero}}</th>
 <th>{{$trajets->date_de_depart}}</th>
 <th>{{$trajets->lieu_de_depart}}</th>
 <th>{{$trajets->date_darrivee}}</th>

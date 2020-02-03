@@ -6,6 +6,9 @@
 
 @foreach($reservations as $reservations)
 <tr>
+    <th>{{$reservations->prenom}}</th>
+    <th>{{$reservations->nom}}</th>
+    <th>{{$reservations->votre_numero}}</th>
 <th>{{$reservations->produit}}</th>
 <th>{{$reservations->poids}}</th>
 <th>{{$reservations->unite}}</th>

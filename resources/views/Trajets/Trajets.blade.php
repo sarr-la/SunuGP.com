@@ -12,6 +12,9 @@
         </tr>
         @foreach($Trajets as $Trajets)
             <tr>
+                <th>{{$Trajets->prenom}}</th>
+                <th>{{$Trajets->nom}}</th>
+                <th>{{$Trajets->votre_numero}}</th>
                 <th>{{$Trajets->date_de_depart}}</th>
                 <th>{{$Trajets->lieu_de_depart}}</th>
                 <th>{{$Trajets->date_darrivee}}</th>

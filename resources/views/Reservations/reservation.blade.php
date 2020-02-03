@@ -1,9 +1,12 @@
 <table class="table table-striped">
        <tr>
-           <th>produit</th> 
+           <th>prenom</th>
+           <th>nom</th>
+           <th>votre_numero</th>
+           <th>produit</th>
             <th>poids</th>
-            <th>unite</th> 
-            <th>type_de_produit</th> 
+            <th>unite</th>
+            <th>type_de_produit</th>
        </tr>
        @foreach($reservation as $reservation)
 
@@ -15,6 +18,9 @@
 
 
            <tr>
+               <th>{{$reservation->prenom}}</th>
+               <th>{{$reservation->nom}}</th>
+               <th>{{$reservation->votre_numero}}</th>
                <th>{{$reservation->produit}}</th>
                <th>{{$reservation->poids}}</th>
                <th>{{$reservation->unite}}</th>

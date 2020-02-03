@@ -33,6 +33,9 @@ class trajetController extends Controller
 
 
         $data = $request->validate([
+            'prenom' => 'required|min:2|string',
+            'nom' => 'required|min:2|string',
+            'votre_numero' => 'required|min:9|numeric',
             'date_de_depart' => 'required|min:1|date',
             'lieu_de_depart' => 'required|min:2|string',
             'date_darrivee'=>'required|min:1|date',
@@ -59,6 +62,9 @@ class trajetController extends Controller
             $this->uploadImage($image, $folder, 'public', $image_name);
             }
 
+            $trajet->prenom = $request->input('prenom');
+            $trajet->nom = $request->input('nom');
+            $trajet->votre_numero = $request->input('votre_numero');
             $trajet->date_de_depart = $request->input('date_de_depart');
             $trajet->lieu_de_depart = $request->input('lieu_de_depart');
             $trajet->date_darrivee = $request->input('date_darrivee');
@@ -85,6 +91,9 @@ return $file;
 public function update(Request $request, $id)
 {
     $data = $request->validate([
+        'prenom' => 'required|min:2|string',
+        'nom' => 'required|min:2|string',
+        'votre_numero' => 'required|min:9|numeric',
         'date_de_depart' => 'required|min:1|date',
         'lieu_de_depart' => 'required|min:2|string',
         'date_darrivee'=>'required|min:1|date',
@@ -109,6 +118,9 @@ $folder.$image_name.'.'.$image->getClientOriginalExtension();
 $this->uploadImage($image, $folder, 'public', $image_name);
 }
 
+$Trajets->prenom = $request->input('prenom');
+$Trajets->nom = $request->input('nom');
+$Trajets->votre_numero = $request->input('votre_numero');
 $Trajets->date_de_depart = $request->input('date_de_depart');
 $Trajets->lieu_de_depart = $request->input('lieu_de_depart');
 $Trajets->date_darrivee = $request->input('date_darrivee');

@@ -3,6 +3,15 @@
 <div class="container">
 <form action="{{route(' create_Reservations ')}}" method="post">
 @csrf
+    <div>
+        <input type="text" name="prenom" class="form-control" placeholder="prénom">
+    </div>
+    <div>
+        <input type="text" name="nom" class="form-control" placeholder="nom">
+    </div>
+    <div>
+        <input type="text" name="votre_numero" class="form-control" placeholder="votre numéro">
+    </div>
 <div>
 <input type="text" name="produit" class="form-control" placeholder="produit">
 </div>

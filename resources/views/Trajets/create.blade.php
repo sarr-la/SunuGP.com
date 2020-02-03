@@ -6,6 +6,15 @@
 <div class="container">
 <form action="{{route(' create_Trajets ')}}" method="post">
 @csrf
+    <div>
+        <input type="text" name="prenom" class="form-control" placeholder="prénom">
+    </div>
+    <div>
+        <input type="text" name="nom" class="form-control" placeholder="nom">
+    </div>
+    <div>
+        <input type="text" name="votre_numero" class="form-control" placeholder="votre numéro">
+    </div>
 <div>
 <input type="date" name="date_de_depart" class="form-control" placeholder="date de départ, exemple:2020-01-19 19:39:25">
 </div>

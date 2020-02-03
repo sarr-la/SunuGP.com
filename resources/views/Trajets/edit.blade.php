@@ -17,6 +17,9 @@ class="col-6"><h3>Chargez une autre image pour remplacer celle-ci</h3></div>
 
    @csrf
    @method('patch')
+    <div><input type="text" name="prenom" class="form-control" placeholder="prenom" value="{{$Trajets->prenom}}"></div>
+    <div><input type="text" name="nom" class="form-control" placeholder="nom" value="{{$Trajets->nom}}"></div>
+    <div><input type="text" name="votre_numero" class="form-control" placeholder="votre_numero" value="{{$Trajets->votre_numero}}"></div>
    <div><input type="text" name="date_de_depart" class="form-control" placeholder="date_de_depart" value="{{$Trajets->date_de_depart}}"></div>
    <div><input type="text" name="lieu_de_depart" class="form-control" placeholder="lieu_de_depart" value="{{$Trajets->lieu_de_depart}}"> </div>
    <div><input type="text" name="date_darrivee" class="form-control" placeholder="date_darrivee" value="{{$Trajets->date_darrivee}}"> </div>

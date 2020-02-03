@@ -26,6 +26,9 @@ public function index(){
 public function store(Request $request)
 {
     $data = $request->validate([
+        'prenom'=>'required|min:2',
+        'nom'=>'required|min:2',
+        'votre_numero' => 'required|min:9|numeric',
         'produit'=>'required|min:2',
         'poids' => 'required|min:1|numeric',
         'unite'=>'required|min:2',
@@ -34,6 +37,9 @@ public function store(Request $request)
 
 
         $reservation = new \App\Resevation();
+        $reservation->prenom = $request->input('prenom');
+        $reservation->nom = $request->input('nom');
+        $reservation->votre_numero = $request->input('votre_numero');
         $reservation->produit = $request->input('produit');
         $reservation->poids = $request->input('poids');
         $reservation->unite = $request->input('unite');

@@ -42,6 +42,7 @@ class trajetController extends Controller
             'lieu_darrivee'=>'required|min:2|string',
             'type_de_vehicule'=>'required|min:2|string',
             'matricule'=>'required|min:7|string',
+            'frais_transport'=>'required|min:11|string',
             "trajet_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
             ]);
 
@@ -71,6 +72,7 @@ class trajetController extends Controller
             $trajet->lieu_darrivee = $request->input('lieu_darrivee');
             $trajet->type_de_vehicule = $request->input('type_de_vehicule');
             $trajet->matricule = $request->input('matricule');
+            $trajet->frais_transport = $request->input('frais_transport');
             //$trajet->image = $request->input('');
             $trajet->user_id = 1;
             $trajet->save();
@@ -100,6 +102,7 @@ public function update(Request $request, $id)
         'lieu_darrivee'=>'required|min:2|string',
         'type_de_vehicule'=>'required|min:2|string',
         'matricule'=>'required|min:7|string',
+        'frais_transport'=>'required|min:11|string',
         "trajet_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
 ]);
 $trajet = \App\Trajet::find($id);
@@ -127,6 +130,7 @@ $Trajets->date_darrivee = $request->input('date_darrivee');
 $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
 $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
 $Trajets->matricule = $request->input('matricule');
+$Trajets->frais_transport = $request->input('frais_transport');
 //  $Trajets->image = $request->input('image');
 
 

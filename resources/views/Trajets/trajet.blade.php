@@ -11,6 +11,7 @@
             <th>lieu_darrivee</th>
             <th>type_de_vehicule</th>
             <th>matricule</th>
+            <th>frais_transport</th>
        </tr>
        @foreach($trajet as $trajet)
            <tr>
@@ -23,7 +24,8 @@
                <th>{{$trajet->lieu_darrivee}}</th>
                <th>{{$trajet->type_de_vehicule}}</th>
                <th>{{$trajet->matricule}}</th>
-               <p><a href="{{route('ajouter_trajet')}}">Ajouter un trajet</a></p>
+               <th>{{$trajet->frais_transport}}</th>
+               <p><a href="{{route('ajouter_trajet')}}">Ajouter votre trajet</a></p>
 
 
         </tr>

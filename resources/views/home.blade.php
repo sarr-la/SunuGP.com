@@ -36,6 +36,10 @@
             Il faut bien mettre votre cadeau dans les mains de celui qui en connait bien sa vraie valeur. </p>
         </div>
         <div class="col-md-4">
+
+        <body style="background-image:url(images/t.jpg);"> 
+
+
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
@@ -67,8 +71,8 @@
               <img class="img-fluid" src="{{$trajet->image}}" alt=""><hr>
             </div>
               <div class="portfolio-caption">
-                <p><button><a href="{{route('ajouter_trajet')}}"><strong>Ajouter un trajet</strong></a></button></p><hr>
-                  <p><button><a href="{{route('ajouter_reservation')}}"><strong>Créer une réservation</strong></a></button></p>
+                <p><button><a href="{{route('ajouter_trajet')}}"><strong>Proposez un trajet</strong></a></button></p><hr>
+                  <p><button><a href="{{route('ajouter_reservation')}}"><strong>Créez votre réservation</strong></a></button></p>
              </div>
 
           </a>
@@ -82,6 +86,7 @@
             <hr>
             <p><span><strong>Type de véhicule:</strong>{{$trajet->type_de_vehicule}}</span></p>
               <p><span><strong>Matricule:</strong>{{$trajet->matricule}}</span></p>
+              <p><span><strong>Frais de transport:</strong>{{$trajet->frais_transport}}</span></p>
             <p class="text-muted"></p>
           </div>
         </div>

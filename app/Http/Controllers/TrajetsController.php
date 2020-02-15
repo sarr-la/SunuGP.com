@@ -31,6 +31,7 @@ class TrajetsController extends Controller
    $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
    $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
    $Trajets->matricule = $request->input('matricule');
+   $Trajets->frais_transport = $request->input('frais_transport');
    $Trajets->image = $request->input('image');
    $Trajets->save();
    return redirect('/');
@@ -63,6 +64,7 @@ public function update(Request $request, $id){
         $Trajets->lieu_darrivee = $request->input('lieu_darrivee');
         $Trajets->type_de_vehicule = $request->input('type_de_vehicule');
         $Trajets->matricule = $request->input('matricule');
+        $Trajets->frais_transport = $request->input('frais_transport');
       //  $Trajets->image = $request->input('image');
         $Trajets->save();
     }

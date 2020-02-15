@@ -24,6 +24,7 @@ class CreateTrajetsTable extends Migration
             $table->string('lieu_darrivee');
             $table->string('type_de_vehicule');
             $table->string('matricule');
+            $table->string('frais_transport');
             $table->string('image');
             $table->unsignedInteger('user_id');
             $table->timestamps();

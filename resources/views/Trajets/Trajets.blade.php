@@ -9,6 +9,7 @@
             <th>lieu_darrivee</th>
             <th>type_de_vehicule</th>
             <th>matricule</th>
+            <th>frais_transport</th>
         </tr>
         @foreach($Trajets as $Trajets)
             <tr>
@@ -21,11 +22,12 @@
                 <th>{{$Trajets->lieu_darrivee}}</th>
                 <th>{{$Trajets->type_de_vehicule}}</th>
                 <th>{{$Trajets->matricule}}</th>
+                <th>{{$Trajets->frais_transport}}</th>
             <tr>
                 <th>{{$Trajets->name}} - <img src="{{$Trajets->image ?
 asset($Trajets->image) : asset('uploads/images/default.png')}}"
                                               alt="{{$Trajets->name}}" width="50"></th>
-                <th>{{$Trajets->date_de_depart}} {{$Trajets->lieu_de_depart}} {{$Trajets->date_darrivee}} {{$Trajets->lieu_darrivee}} {{$Trajets->type_de_vehicule}} {{$Trajets->matricule}} {{ $Trajets->image->name ?? ''
+                <th>{{$Trajets->date_de_depart}} {{$Trajets->lieu_de_depart}} {{$Trajets->date_darrivee}} {{$Trajets->lieu_darrivee}} {{$Trajets->type_de_vehicule}} {{$Trajets->matricule}} {{$Trajets->frais_transport}} {{ $Trajets->image->name ?? ''
 }}</th>
                 <th>
                     <p><a href="{{route('editer_Trajets',['id'=>$Trajets->id])}}"

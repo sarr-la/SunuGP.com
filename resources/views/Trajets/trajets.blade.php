@@ -12,6 +12,7 @@
 <th>{{$trajets->lieu_darrivee}}</th>
 <th>{{$trajets->type_de_vehicule}}</th>
     <th>{{$trajets->matricule}}</th>
+    <th>{{$trajets->frais_transport}}</th>
 <br> {{
 $trajets->trajets->name ?? '' }}</th>
 <th></th>

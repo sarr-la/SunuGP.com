@@ -33,6 +33,9 @@
     <div>
         <input type="text" name="matricule" class="form-control" placeholder="matricule">
     </div>
+    <div>
+        <input type="text" name="frais_transport" class="form-control" placeholder="frais/kg">
+    </div>
 <div>
 <input type="image" name="image" class="form-control" placeholder="image">
 </div>

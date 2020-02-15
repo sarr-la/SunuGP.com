@@ -25,16 +25,14 @@
   <!-- Custom styles for this template -->
   <link href="{{asset('css/all.css')}}" rel="stylesheet" />
   {{--<link href="css/agency.min.css" rel="stylesheet">--}}
-
 </head>
-
 <body id="page-top">
   <br><br><br><br><br>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">SunuGP.com</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">       
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -45,11 +43,11 @@
           </li>
           @guest
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">Connexion</a>
+              <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
           </li>
           @if (Route::has('register'))
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">Inscription</a>
+                  <a class="nav-link" href="{{ route('register') }}">Créer un compte</a>
               </li>
           @endif
       @else
@@ -71,7 +69,6 @@
                                     document.getElementById('logout-form').submit();">
                       Deconnexion
                   </a>
-
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
                   </form>
@@ -101,19 +98,19 @@
     <form action="{{route('store_Contact')}}" method="post">
 @csrf
 <div>
-<input type="text" name="prenom" class="form-control" placeholder="prénom">
+<input type="text" name="prenom" class="form-control" placeholder="Votre prénom">
 </div>
 <div>
-<input type="text" name="nom" class="form-control" placeholder="nom">
+<input type="text" name="nom" class="form-control" placeholder="Votre nom">
 </div>
 <div>
-<input type="text" name="email" class="form-control" placeholder="email">
+<input type="text" name="email" class="form-control" placeholder="Votre email">
 </div>
         <div>
-            <input type="text" name="numero_de_telephone" class="form-control" placeholder="numéro de de téléphone">
+            <input type="text" name="numero_de_telephone" class="form-control" placeholder="Votre numéro de de téléphone">
         </div>
 <div>
-<input type="text" name="votre_sujet" class="form-control" placeholder="objet">
+<input type="text" name="votre_sujet" class="form-control" placeholder="Objet">
 </div>
 <div>
 <textarea id="votre_message" name="votre_message" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>

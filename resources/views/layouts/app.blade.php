@@ -84,6 +84,9 @@
 
 @yield("content")
 
+
+
+
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
@@ -148,7 +151,7 @@
       </div><hr>
   <!-- Copyright -->
     <footer>
-  <div class="footer-copyright text-center py-3"><strong>© 2020 </strong>Tous droits réservés par les jeunes développeurs de <strong>GalimaTech:</strong>
+  <div class="footer-copyright text-center py-3"><strong>© 2020 </strong>Tout droit réservé par les développeurs de <strong>GalimaTech:</strong>
     <a  href="{{route('home')}}"> <strong>SunuGP.com </strong></a>
   </div>
   <!-- Copyright -->

@@ -14,7 +14,6 @@ class="col-6"><h3>Chargez une autre image pour remplacer celle-ci</h3></div>
 
 
 
-
    @csrf
    @method('patch')
     <div><input type="text" name="prenom" class="form-control" placeholder="prenom" value="{{$Trajets->prenom}}"></div>
@@ -27,7 +26,7 @@ class="col-6"><h3>Chargez une autre image pour remplacer celle-ci</h3></div>
    <div><input type="text" name="type_de_vehicule" class="form-control" placeholder="type_de_vehicule" value="{{$Trajets->type_de_vehicule}}"> </div>
     <div><input type="text" name="matricule" class="form-control" placeholder="matricule" value="{{$Trajets->matricule}}"> </div>
     <div><input type="text" name="frais_transport" class="form-control" placeholder="frais/kg" value="{{$Trajets->frais_transport}}"> </div>
-   <div> <button class="btn btn-primary">Enregistrer</button> </div>
+   <div><button class="btn btn-primary">Enregistrer</button> </div>
 </form>
 @endsection
 

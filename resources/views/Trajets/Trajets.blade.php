@@ -3,13 +3,16 @@
 @section('content')
     <table class="table table-striped">
         <tr>
-            <th>date_de_depart</th>
-            <th>lieu_de_depart</th>
-            <th>date_darrivee</th>
-            <th>lieu_darrivee</th>
-            <th>type_de_vehicule</th>
-            <th>matricule</th>
-            <th>frais_transport</th>
+            <th>Votre prénom</th>
+            <th>Votre nom</th>
+            <th>Votre numéro</th>
+            <th>Date de départ</th>
+            <th>Lieu de départ</th>
+            <th>Date d'arrivée</th>
+            <th>Lieu d'arrivée</th>
+            <th>Type de véhicule</th>
+            <th>Matricule</th>
+            <th>Frais de transport</th>
         </tr>
         @foreach($Trajets as $Trajets)
             <tr>
